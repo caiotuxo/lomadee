@@ -20,7 +20,7 @@ Then you can use like this:
 
 This get all products in the cellphone category. Or like this:
 
-	lomadee.products(keyword: "Apple")
+  lomadee.products(keyword: "Apple")
 
 This get all products using the keyword "Apple"
 
