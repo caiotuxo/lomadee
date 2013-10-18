@@ -16,11 +16,11 @@ First instantiate a new 'Lomadee::Base' object with two parameters (application_
 
 Then you can use like this:
 
-  lomadee.category(77).products
+  lomadee.offers(categoryId: 77)
 
 This get all products in the cellphone category. Or like this:
 
-	lomadee.keyword("Apple").products
+	lomadee.products(keyword: "Apple")
 
 This get all products using the keyword "Apple"
 
