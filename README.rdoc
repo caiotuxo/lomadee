@@ -1,0 +1,28 @@
+== Lomadee
+
+This is the lightweight wrapper for Lomadee API. (http://developer.buscape.com/api/api-e-documentacao-lomadee)
+
+= How to install?
+
+Simple as:
+
+  gem install lomadee
+
+= How to use?
+
+First instantiate a new 'Lomadee::Base' object with two parameters (application_id, sandbox? (default: false)), for example:
+
+  lomadee = Lomadee::Base.new("you_application_id")
+
+Then you can use like this:
+
+  lomadee.category(77).products
+
+This get all products in the cellphone category. Or like this:
+
+	lomadee.keyword("Apple").products
+
+This get all products using the keyword "Apple"
+
+
+Help me improving this gem (and the documentation of course)! Fork this project and feel free to help. :)
