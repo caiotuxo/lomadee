@@ -2,10 +2,11 @@ module Lomadee
   class Base
     include HTTParty
 
-    def initialize(application_id, sandbox = false)
+    def initialize(application_id, sandbox = false, country = "BR")
       raise "You need to inform your :application_id" if application_id.nil?
 
       @env = (sandbox) ? 'sandbox' : 'bws'
+      @country = country
 
       @application_id = application_id
 
@@ -43,7 +44,7 @@ module Lomadee
 
       @uris[method] = "viewSellerDetails" if method === :details && !@data[:seller].blank? && @data[:product].blank?
 
-      url = "http://#{@env}.buscape.com/service/#{@uris[method]}/lomadee/#{@application_id}/"
+      url = "http://#{@env}.buscape.com/service/#{@uris[method]}/lomadee/#{@application_id}/#{@country}/"
 
       @data.each { |sym, value|
         url += ((url[-1, 1] == "/") ? "?" : "&") + "#{(@params[sym].nil?) ? sym.to_s : @params[sym]}=#{value}"
