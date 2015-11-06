@@ -21,7 +21,8 @@ module Lomadee
         :category => "categoryId",
         :product => "productId",
         :barcode => "barcode",
-        :keyword => "keyword"
+        :keyword => "keyword",
+        :sourceId => "sourceId"
       }
 
       @data = {}
